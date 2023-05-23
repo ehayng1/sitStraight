@@ -71,7 +71,6 @@ const docRef = collection(db, "data");
 const q = query(docRef, orderBy("timeStamp"), limit(7));
 const querySnapshot = await getDocs(q);
 querySnapshot.forEach((doc) => {
-  // console.log(doc.id, " => ", doc.data());
   good.push(doc.data().goodPosture / 60000);
   bad.push(doc.data().badPosture / 60000);
 });

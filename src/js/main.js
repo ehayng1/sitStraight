@@ -113,14 +113,14 @@ export function nextFrame() {
           cameraTime = cameraTime + 5000;
           badStartTime = new Date().getTime();
           console.log(badStartTime);
-          // alert("Your posture has been bad for 5 seconds");
-          dialog.showMessageBox({
-            type: "info",
-            title: "Information",
-            message: "Hello, world!",
-            icon: "/path/to/image.png",
-            buttons: ["OK"],
-          });
+          alert("Your posture has been bad for 5 seconds");
+          // dialog.showMessageBox({
+          //   type: "info",
+          //   title: "Information",
+          //   message: "Hello, world!",
+          //   icon: "/path/to/image.png",
+          //   buttons: ["OK"],
+          // });
         }
 
         goodStartTime = new Date().getTime();
@@ -167,8 +167,8 @@ export function nextFrame() {
       let timeDiff = badEndTime - badStartTime;
       if (timeDiff > timeThreshold) {
         // warn user if bad posture persists more than 5 min
-        if (timeDiff > 1000) {
-          // alert("Your posture has been bad for 5 seconds!");
+        if (timeDiff > 3000) {
+          alert("Your posture has been bad for 3 seconds!");
           // dialog.showMessageBox({
           //   type: "info",
           //   title: "Information",
